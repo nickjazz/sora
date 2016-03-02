@@ -1,0 +1,142 @@
+@import "lib/normalize"
+
+body
+  font-family: 'Roboto', sans-serif
+  font-size: 16px
+  font-weight: 300
+  color: #212121
+
+#header
+  padding: 50px 0
+  text-align: center
+  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d)
+  background: linear-gradient(to left, #43cea2 , #185a9d)    
+  color: #fff
+  text-shadow: 0 1px 1px rgba(#000, .1)
+        
+  .logo
+    font-size: 1rem
+    font-weight: 600
+    margin-bottom: 40px
+
+.demo-grid
+  min-height: 10px
+  padding: 5px 10px
+  font-size: 12px
+  margin: 2px
+  color: #212121
+  background: #BBDEFB
+  margin-bottom: 4px
+  [class*="-xs-"] &
+    background: #C5CAE9
+  [class*="-sm-"] &
+    background: #F0F4C3
+  [class*="-md-"] &
+    background: #FFCCBC
+  [class*="-lg-"] &
+    background: #ECEFF1
+
+.demo-grid-list-item
+  height: 400px
+  background: #eee
+  overflow: auto
+  margin: 2px
+  padding: 30px
+  .demo-grid
+    min-height: 100px
+    background: #ddd
+    border-radius: 4px
+
+[class*="col"]
+  transition: all .4s ease
+
+.btn
+  padding: 8px 10px
+  background: #000
+  color: #fff
+  text-decoration: none
+  margin-bottom: 10px
+  border-radius: 2px
+  font-size: 12px
+  display: inline-block
+
+.demo-st
+  background: #1A1818
+  font-size: 20px
+  padding: 2rem
+  text-align: center
+  > span
+    display: inline-block
+    color: #999
+    &.empty
+      width: 10px
+    &.res
+      color: #E91E63
+    &.value
+      color: #40BEDC
+    &.parent
+      color: #1CD84E
+
+.container
+  max-width: 1220px
+  margin: 0 auto
+
+.demo-wrapper
+  padding: 50px
+
+#menu
+  padding: 10px 0
+  text-align: center
+  transition: all .3s ease
+  .logo-nav
+    opacity: 0
+    transform: translateY(-10%)
+  &.fixed
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    background: #fff
+    box-shadow: 0 2px 4px rgba(#000, .1)
+    z-index: 999
+    .logo-nav
+      opacity: 1
+      transform: translateY(0)
+
+.demo-menu
+  margin: 0
+  padding: 0
+  list-style: none 
+  li
+    transition: all .3s ease
+    display: inline-block
+    a
+      display: block
+      padding: 7px 15px
+      text-decoration: none
+      color: #212121
+      font-size: 13px
+      font-weight: 500
+      &.active
+        color: #43cea2
+  .logo-nav a
+    background: -webkit-linear-gradient(to left, #43cea2 , #185a9d)
+    background: linear-gradient(to left, #43cea2 , #185a9d)    
+    color: #fff
+    border-radius: 2px
+    font-weight: 600
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: 300
+
+.row
+  &:after
+    content: ''
+    display: table
+    clear: both

@@ -1,0 +1,35 @@
+@import "_variables"
+
+=make-grid($grid-number)
+  
+  // normal
+  @each $b, $b-px in $breakpoint
+    @media all and (min-width: #{$b-px})
+      @for $i from 1 through ($grid-number)
+        .col-#{$b}-#{$i}-#{$grid-number}
+          width: (100% / $grid-number) * $i
+          float: left
+          min-height: 1px
+  
+  // container queries
+  @each $b, $b-px in $breakpoint
+    .row-parent[min-width ~= "#{$b-px}"]
+      @for $i from 1 through ($grid-number)
+        .col-p-#{$b}-#{$i}-#{$grid-number}
+          width: (100% / $grid-number) * $i
+          float: left
+          min-height: 1px
+
+
++make-grid(10)
++make-grid(12)
+
+
+
+
+
+
+
+
+
+
